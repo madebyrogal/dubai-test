@@ -18,7 +18,7 @@ export default class Slide extends Component {
                         <dt>Phone</dt>
                         <dd>{this.props.broker.phone}</dd>
                         <dt>About</dt>
-                        <dd>{this.props.broker.description}</dd>
+                        <dd>{this.props.broker.description.substring(0, 1600) + ' ...'}</dd>
                     </dl>
                 </div>
             </li>
