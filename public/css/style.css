@@ -1,0 +1,74 @@
+body {
+  font-size: 14px;
+}
+.pointer {
+  cursor: pointer;
+}
+.navbar-inverse {
+  background-color: #222;
+  border-color: #222;
+  border-radius: 0;
+}
+.dubai-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+}
+.dubai-carousel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dubai-carousel ul li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  /* For Safari 3.1 to 6.0 */
+  transition: opacity 2s;
+}
+.dubai-carousel ul li .logo {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.dubai-carousel ul li .content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.dubai-carousel ul li .content h2 {
+  text-align: center;
+}
+.dubai-carousel ul li.active {
+  opacity: 1;
+}
+.dubai-carousel .nav-slider {
+  position: absolute;
+  display: block;
+  width: 10%;
+  height: 100%;
+  z-index: 2;
+}
+.dubai-carousel .nav-slider::before {
+  position: absolute;
+  top: 40%;
+  font-size: 120px;
+  color: #000;
+}
+.dubai-carousel .nav-slider.prev {
+  left: 0;
+}
+.dubai-carousel .nav-slider.prev::before {
+  content: "\02C2";
+  left: 5%;
+}
+.dubai-carousel .nav-slider.next {
+  right: 0;
+}
+.dubai-carousel .nav-slider.next::before {
+  content: "\02C3";
+  right: 5%;
+}

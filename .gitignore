@@ -1,0 +1,5 @@
+# VENDORS
+/node_modules
+
+# OTHERS
+/nbproject

@@ -1,0 +1,74 @@
+.dubai-carousel {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            opacity: 0;
+            -webkit-transition: opacity 2s; /* For Safari 3.1 to 6.0 */
+            transition: opacity 2s;
+            
+            .logo {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+            
+            .content {
+                max-width: 80%;
+                margin: 0 auto;
+                
+                h2 {
+                    text-align: center
+                }
+            }
+            
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    
+    .nav-slider {
+        position: absolute;
+        display: block;
+        width: 10%;
+        height: 100%;
+        z-index: 2;
+        
+        &::before {
+            position: absolute;
+            top: 40%;
+            font-size: 120px;
+            color: #000;
+        }
+        
+        &.prev {
+            left: 0;
+            
+            &::before {
+                content: "\02C2";
+                left: 5%;
+            }
+        }
+        
+        &.next {
+            right: 0;
+            
+            &::before {
+                content: "\02C3";
+                right: 5%;
+            }
+        }
+    }
+}
